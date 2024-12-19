@@ -58,3 +58,6 @@ endif
 :colorscheme darkblue
 :set tabstop=4
 :nmap - $
+:vmap - $
+command Vte rightbelow vertical terminal
+cnoreabbrev vte rightbelow vertical terminal
