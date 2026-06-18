@@ -10,8 +10,12 @@ vim.api.nvim_set_keymap('v', '-', '$', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t','<Esc>','<C-\\><C-n>',{ noremap = true, silent = true })
 
 vim.api.nvim_create_user_command('Vte', 'rightbelow vertical terminal', {})
+vim.api.nvim_create_user_command('Hte', 'horizontal terminal', {})
 vim.cmd([[
 cnoreabbrev vte rightbelow vertical terminal
+]])
+vim.cmd([[
+cnoreabbrev hte horizontal terminal
 ]])
 
 vim.api.nvim_create_autocmd('TextYankPost',{

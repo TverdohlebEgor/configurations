@@ -20,11 +20,17 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+vim.opt.background = "dark"
+
 -- Setup lazy.nvim
 require("lazy").setup({
+  trasparent = false,
   spec = {
     { "folke/tokyonight.nvim", config = function() vim.cmd.colorscheme "tokyonight" end},
     -- I can use this V to add spec like ^ in different file. NB plugins.mininvim -> plugins/mininvim
     { import = "plugins" },
   },
+  rocks = {
+    hererocks = true, 
+  }
 })
